@@ -201,17 +201,18 @@ public class ArrayListTest {
         Assertions.assertEquals(newArray.toString(), arrayList.sortInsertion().toString());
     }
 
+
     public static Stream<Arguments> containsBinaryTestParams() {
         return Stream.of(
                 Arguments.of(3, true),
                 Arguments.of(11, true),
-                Arguments.of(12, false)
+                Arguments.of(44, false)
         );
     }
 
-    /*@ParameterizedTest
+    @ParameterizedTest
     @MethodSource("containsBinaryTestParams")
     public void containsBinaryTest(Integer value, boolean expected) {
         Assertions.assertEquals(expected, arrayList.sortInsertion().containsBinary(value));
-    }*/
+    }
 }

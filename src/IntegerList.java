@@ -78,4 +78,6 @@ public interface IntegerList {
     ArrayList sortInsertion();
 
     String toString(String s);
+
+    boolean containsBinary(Integer i);
 }

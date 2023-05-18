@@ -22,5 +22,7 @@ public class Main {
 
         arr.sortInsertion();
         System.out.println(arr.toString(", "));
+        System.out.println(arr.containsBinary(5));
+        System.out.println(arr.containsBinary(51));
     }
 }
