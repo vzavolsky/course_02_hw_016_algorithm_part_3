@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
@@ -21,6 +22,11 @@ public class ArrayListTest {
         arrayList.add(0);
         arrayList.add(-1);
     }
+
+    /*@AfterEach
+    public void afterEach() {
+        while (!)
+    }*/
 
     @Test
     public void addByIndexTest() {

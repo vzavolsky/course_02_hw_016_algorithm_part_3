@@ -18,11 +18,6 @@ public class Main {
         arr.add(5);
         arr.add(44);
 
-        System.out.println(arr.toString(", "));
-
-        arr.sortInsertion();
-        System.out.println(arr.toString(", "));
         System.out.println(arr.containsBinary(5));
-        System.out.println(arr.containsBinary(51));
     }
 }

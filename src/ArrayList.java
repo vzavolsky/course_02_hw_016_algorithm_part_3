@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArrayList implements IntegerList {
 
     private Integer[] arr;
@@ -264,18 +266,29 @@ public class ArrayList implements IntegerList {
         return this;
     }
 
+    private Integer[] arrayClone() {
+        Integer[] arrCopy = new Integer[arr.length];
+        System.arraycopy(arr, 0, arrCopy, 0, arr.length);
+        return arrCopy;
+    }
+
     public boolean containsBinary(Integer element) {
+        ArrayList arrayCopy = this.sortInsertion();
+
+        System.out.println();
+        System.out.println(arrayCopy.toString());
+
         int min = 0;
-        int max = arr.length - 1;
+        int max = arrayCopy.size() - 1;
 
         while (min <= max) {
             int mid = (min + max) / 2;
 
-            if (element == arr[mid]) {
+            if (element.equals(arrayCopy.get(mid))) {
                 return true;
             }
 
-            if (element < arr[mid]) {
+            if (element < arrayCopy.get(mid)) {
                 max = mid - 1;
             } else {
                 min = mid + 1;
