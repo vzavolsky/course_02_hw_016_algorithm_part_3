@@ -251,19 +251,19 @@ public class ArrayList implements IntegerList {
     }
 
     public ArrayList sortInsertion(ArrayList list) {
-        for (int left = 0; left < this.size(); left++) {
-            int value = this.get(left); // Вытаскиваем значение элемента
+        for (int left = 0; left < list.size(); left++) {
+            int value = list.get(left); // Вытаскиваем значение элемента
             int i = left - 1; // Перемещаемся по элементам, которые перед вытащенным элементом
             for (; i >= 0; i--) {
-                if (value < this.get(i)) { // Если вытащили значение меньшее — передвигаем больший элемент дальше
-                    this.set(i + 1, this.get(i));
+                if (value < list.get(i)) { // Если вытащили значение меньшее — передвигаем больший элемент дальше
+                    list.set(i + 1, list.get(i));
                 } else {// Если вытащенный элемент больше — останавливаемся
                     break;
                 }
             }
-            this.set(i + 1, value); // В освободившееся место вставляем вытащенное значение
+            list.set(i + 1, value); // В освободившееся место вставляем вытащенное значение
         }
-        return this;
+        return list;
     }
 
     private Integer[] arrayClone() {
