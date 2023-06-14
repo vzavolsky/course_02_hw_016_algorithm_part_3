@@ -250,7 +250,7 @@ public class ArrayList implements IntegerList {
         return this;
     }
 
-    public ArrayList sortInsertion() {
+    public ArrayList sortInsertion(ArrayList list) {
         for (int left = 0; left < this.size(); left++) {
             int value = this.get(left); // Вытаскиваем значение элемента
             int i = left - 1; // Перемещаемся по элементам, которые перед вытащенным элементом
@@ -273,7 +273,7 @@ public class ArrayList implements IntegerList {
     }
 
     public boolean containsBinary(Integer element) {
-        ArrayList arrayCopy = this.sortInsertion();
+        ArrayList arrayCopy = sortInsertion(this);
 
         System.out.println();
         System.out.println(arrayCopy.toString());
