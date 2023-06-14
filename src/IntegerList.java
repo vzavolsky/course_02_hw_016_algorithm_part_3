@@ -75,7 +75,7 @@ public interface IntegerList {
     // и вернуть его.
     ArrayList toArray();
 
-    ArrayList sortInsertion();
+    ArrayList sortInsertion(ArrayList list);
 
     String toString(String s);
 
